@@ -25,6 +25,15 @@ window.addEventListener("load", function(){
 
     document.getElementById("task-list-container").innerHTML = listMarkup;
 
+    let liNodes = document.querySelectorAll("li");
+
+    for (let i = 0; i < liNodes.length; i++) {
+      liNodes[i].addEventListener("click", function(event){
+        let node = event.target;
+        node.style.textDecoration = "line-through";
+      });
+    }
+
   });
 
 });
